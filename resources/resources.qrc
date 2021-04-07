@@ -1,0 +1,9 @@
+ <!DOCTYPE RCC><RCC version="1.0">
+ <qresource>
+     <file>лес-1.jpg</file>
+     <file>Comfortaa-Regular.ttf</file>
+     <file>poachers.jpg</file>
+     <file>gamekeeper.jpg</file>
+     <file>think.jpg</file>
+ </qresource>
+ </RCC>
