@@ -106,6 +106,10 @@ class MainWindow(Ui_MainWindow, QtWidgets.QMainWindow):
                 self.poachers_dialog.change_text(h, m)
                 self.poachers_dialog.show()
         except MyError:
+            self.error_dialog.invalid_data_label_2.setText(STRING_INVALID_DATA)
+            self.error_dialog.show()
+        except ZeroDivisionError:
+            self.error_dialog.invalid_data_label_2.setText(STRING_IMPOSSIBLE)
             self.error_dialog.show()
 
 
