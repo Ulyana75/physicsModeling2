@@ -7,7 +7,7 @@ from math import log
 
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import QLocale
-from PyQt5.QtGui import QDoubleValidator
+from PyQt5.QtGui import QDoubleValidator, QFont
 
 from ui.main_window import Ui_MainWindow
 from ui_classes.error_dialog_class import ErrorDialog
@@ -24,6 +24,7 @@ class MainWindow(Ui_MainWindow, QtWidgets.QMainWindow):
         self.setupUi(self)
         self.setFixedSize(MAIN_WINDOW_WIDTH, MAIN_WINDOW_HEIGHT)
         self.button_get_answer.setStyleSheet("""
+            QPushButton {font: 16pt "Comfortaa"; }
             QPushButton:hover { background-color: rgb(177, 194, 142) }
             QPushButton:!hover { background-color: rgb(153, 167, 88) }
             QPushButton:pressed { background-color: rgb(63, 71, 31); }
@@ -67,8 +68,14 @@ class MainWindow(Ui_MainWindow, QtWidgets.QMainWindow):
     Проверка на корректность введенных данных
     """
     def check_data(self, x0, x1, x2, a, wt):
-        if len(str(x0 + x1 + x2 + a + wt)) < 5 or \
-                (a > x0 and (x1 > x2 or x1 < x0)) or (a < x0 and (x1 < x2 or x1 > x0)) or (a == x0 and x1 != x2 != x0):
+        if len(x0 + x1 + x2 + a + wt) < 5:
+            return False
+        x0, x1, x2, a, wt = map(float, (x0, x1, x2, a, wt))
+        if ((a > x0 and (x1 > x2 or x1 < x0))
+                or (a < x0 and (x1 < x2 or x1 > x0))
+                or (a == x0 and x1 != x2 != x0)
+                or (a < x0 and (x1 < a or x2 < a))
+                or (a > x0 and (x1 > a or x2 > a))):
             return False
         return True
 
@@ -104,6 +111,8 @@ class MainWindow(Ui_MainWindow, QtWidgets.QMainWindow):
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
+    init_font()
+    # app.setFont(QFont("Comfortaa"))
     window = MainWindow()
     window.show()
     sys.exit(app.exec_())
