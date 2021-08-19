@@ -1,4 +1,4 @@
-# physicsModeling2
+# Моделирование по физике
 <h1>Случай в заповеднике</h1>
 
 ***При обходе заповедника два егеря обнаружили тушу убитого кабана. Ее осмотр
@@ -15,3 +15,20 @@
 программы было возможно ввести время ожидания браконьеров егерями, темпера-
 туры, вывести виновны или невиновны браконьеры при изменении входных данных,
 а также учесть проверку правильности входных данных.***
+
+<br/>
+
+Написано на python с использованием библиотеки PyQt.
+
+Файл .exe можно найти [по ссылке](https://github.com/Ulyana75/physicsModeling2/blob/master/modeling_physics.exe)
+
+**Скрины из приложения с различными входными данными.**
+
+| <img src="https://sun9-38.userapi.com/impg/ZQJwS0H_xEJJTSqUzFg0rSJDzkTRbX5Pk4LShA/ovxXkfu7Rrk.jpg?size=896x830&quality=96&sign=e69d2132e0c9007a93c42e6819aae051&type=album" width="450">       |<img src="https://sun9-5.userapi.com/impg/8opDmRugQjmTt1P_oiyHBVUVzUFIfJ-g3Glp7Q/bq4NSwKN_Ek.jpg?size=900x831&quality=96&sign=b19ee88795113e8521be05d1fd5f569d&type=album" width="450">               |
+| ------------- |:------------------:|
+| <img src="https://sun9-42.userapi.com/impg/jsXq8KPOXIiZIEftQvA-3V-hjiA5UC33WkdB8w/ZTFYXlGqMCg.jpg?size=902x831&quality=96&sign=a835d881c0f295a6a76741a9e9760b48&type=album" width="450">    |<img src="https://sun9-19.userapi.com/impg/BmgmeGWsLoeJtkov1ADF9rDGd96VudpwNmPeOQ/TJPA6n8g8aY.jpg?size=898x830&quality=96&sign=c63e877ed4906982ca3b2ab6f122b493&type=album" width="450">    |
+
+<br/>
+<br/>
+
+Получили максимальный балл за эту работу)
